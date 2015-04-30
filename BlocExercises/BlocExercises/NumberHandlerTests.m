@@ -33,6 +33,8 @@
 - (void)testThatArrayOfNumbersWorks {
     NSArray *expectedArray = @[@5, @6, @7, @8];
     NSArray *actualArray = [self.handler arrayOfNumbersBetweenNumber:5 andOtherNumber:8];
+    NSLog(@"expected array: %@", expectedArray);
+    NSLog(@"actula array: %@", actualArray);
     XCTAssertEqualObjects(expectedArray, actualArray, @"Incorrect number array was returned.");
 
     expectedArray = @[@-4, @-3, @-2, @-1, @0];
