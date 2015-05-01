@@ -12,7 +12,20 @@
 
 - (NSString *) stringWithNumbersBetweenNumber:(NSInteger)number andOtherNumber: (NSInteger)otherNumber {
     /* WORK HERE */
-    return @"";
+    NSString *concatString = @"";
+    
+    if (number > otherNumber) {
+        NSInteger temp = number;
+        number = otherNumber;
+        otherNumber = temp; 
+    }
+
+    for (NSInteger x = number; x <= otherNumber; x++)
+    {
+        concatString = [concatString stringByAppendingFormat:@"%li", (long)x];
+    }
+
+    return concatString;
 }
 
 @end
