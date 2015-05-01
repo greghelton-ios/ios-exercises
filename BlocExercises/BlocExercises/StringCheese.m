@@ -18,13 +18,11 @@
 
 - (NSString *) cheeseNameWithoutCheeseSuffix:(NSString *)cheeseName {
     /* WORK HERE */
-    NSString *cheese;
-    NSRange cheeseRange = [cheeseName rangeOfString: @" cheese" options:NSCaseInsensitiveSearch];
-    if (cheeseRange.length > 0) {
-        cheese = [cheeseName stringByReplacingCharactersInRange: cheeseRange withString: @""];
-    } else {
-        cheese = cheeseName;
-    }
+    
+    NSRange cheeseRange = [cheeseName rangeOfString: cheeseName];
+    
+    NSString *cheese = [cheeseName stringByReplacingOccurrencesOfString: @" cheese" withString: @"" options: NSCaseInsensitiveSearch range: cheeseRange];
+    
     return cheese;
 }
 
