@@ -24,7 +24,7 @@
     }
 
     /*
-          from lower number to higher number append so that
+          from lower number to higher number append number to NSMutableString
      */
     for (NSInteger x = number; x <= otherNumber; x++)
     {
