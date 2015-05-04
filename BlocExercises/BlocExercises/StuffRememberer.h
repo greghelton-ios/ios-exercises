@@ -26,6 +26,8 @@
  
  */
 
+@property (nonatomic, strong) NSMutableArray *arrayCopy;
+
 /**
  Indicates a mutable array to remember for later.
  
