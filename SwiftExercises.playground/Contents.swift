@@ -169,3 +169,12 @@ sorted(cerealArray, sorting)
 
 let newCerealArray: Array<String> = sorted(cerealArray, <)
 
+
+
+var unsorted = ["Hello","Swift","Welcome","Apple","Xcode"] // must be mutable
+var sortedApples = sorted(unsorted){$0<$1}
+sortedApples
+var revSorted = sorted(unsorted, >)
+revSorted
+
+
