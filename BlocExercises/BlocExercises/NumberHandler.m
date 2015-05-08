@@ -14,7 +14,7 @@
     /* WORK HERE */
     //return @0;
     
-    return @(2 * [number intValue]);
+    return @(2 * number.intValue);
 }
 
 - (NSArray *) arrayOfNumbersBetweenNumber:(NSInteger)number andOtherNumber: (NSInteger)otherNumber {
@@ -29,14 +29,14 @@
 - (NSInteger) lowestNumberInArray:(NSArray *)arrayOfNumbers {
     /* WORK HERE */
     //return 0;
-    long lowest = NSIntegerMax;
-    for (int x = 0; x < [arrayOfNumbers count]; x++) {
-        if ([arrayOfNumbers[x] integerValue] < lowest) {
-            NSLog(@"number in array: %@", arrayOfNumbers[x]);
-            lowest = [arrayOfNumbers[x] integerValue];
+    NSNumber *lowest = @(NSIntegerMax);    // I can't refer to NSIntegerMax but have to use @(NSIntegerMax) ?
+                                            // I never would have figured this out without looking at your code.
+    for (NSNumber *num in arrayOfNumbers) {
+        if ( num.intValue < lowest.intValue ) {
+            lowest = num;
         }
     }
-    return lowest;
+    return lowest.integerValue;
 }
 
 @end
